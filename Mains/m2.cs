@@ -1,16 +1,20 @@
-// Join Method ~ 6/2/21; June 2, 2021
+// Random Element from an Array ~ 6/2/21; June 2, 2021
 
 using System;
 
-namespace Join_Method
+namespace Random_Element
 {
-    class M2 {
-        // static void Main(string[] args) {
-        //     string[] OCs = { "Mitch", "Luna", "Rune", "Rea", "Mallo" };
-            
-        //     string _OCs_ = string.Join(", ", OCs);
+    class M1 {
+        // static void Main(string[] args)
+        // {
+        //     var _Random_ = new Random();
 
-        //     Console.WriteLine("These are my favorite OCs: " + _OCs_);
+        //     string[] OCs = { "Mitch", "Luna", "Rune", "Rea", "Mallo" };
+
+        //     string OC = OCs[_Random_.Next(OCs.Length)];
+        //     string Message = "One of my favorite OC\'s is: " + OC;
+
+        //     Console.WriteLine(Message);
         //     Console.ReadLine();
         // }
     }

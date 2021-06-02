@@ -1,19 +1,18 @@
-// Foreach Loop with Indexes ~ 6/2/21; June 2, 2021
+// Join Method ~ 6/2/21; June 2, 2021
 
 using System;
 
-namespace Foreach_Loop_with_Indexes
+namespace Join_Method
 {
-    class M3 {
-        // static void Main(string[] args) {
-        //     string[] OCs = { "Mitch", "Rea", "Luna", "Rune", "Mallo" };
+    class M2 {
+        // static void Main(string[] args)
+        // {
+        //     string[] OCs = { "Mitch", "Luna", "Rune", "Rea", "Mallo" };
             
-        //     int i = 0;
-        //     foreach (string _OCs_ in OCs) {
-        //         i++;
-        //         Console.WriteLine("My Favorite OC #" + i + " is " + _OCs_) + "\n";
-        //         Console.ReadLine();
-        //     }
+        //     string _OCs_ = string.Join(", ", OCs);
+
+        //     Console.WriteLine("These are my favorite OCs: " + _OCs_);
+        //     Console.ReadLine();
         // }
     }
 }
