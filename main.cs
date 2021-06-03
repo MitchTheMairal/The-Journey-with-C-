@@ -1,49 +1,51 @@
-// // C# if and else statements - 5/31/21; May 31, 2021
+// While Loops - 6/3/21; June 3, 2021
 
-// using System;
+using System;
 
-// namespace Rune_The_Unknown
-// {
-//     public class Program {
-//         public static void Main(string[] args)
-//         {
-//             Console.WriteLine("[ Mitch, Mallo, Luna, Nicky ]");
-//             Console.Write("Who should i meet up with? ");
-//             string OC = Console.ReadLine();
+namespace Runes_With_Who
+{
+    public class Favorite_1 {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine();
+            Console.WriteLine("[ Mitch, Luna, Mallo, Himself ]");
+            string Guess = "";
 
-//             if (OC.ToLower() == "mitch")
-//             {
-//                 Console.WriteLine("--------------------------------");
-//                 Console.WriteLine("Rune: Heya Mitch.\nMitch: Heya! *Smacks*\nRune: A-");
-//             }
-//             else if (OC.ToLower() == "mallo")
-//             {
-//                 Console.WriteLine("--------------------------------");
-//                 Console.WriteLine("Rune: Hi Mallo.\nMallo: Hai Rune.\nRune and Mallo: *Does their secret handshake*");
-//             }
-//             else if (OC.ToLower() == "luna")
-//             {
-//                 Console.WriteLine("-------------------------------");
-//                 Console.WriteLine("Rune: Hi Luna, now stay away-\nLuna: You've chosen death, Rune.\nRune: *Armanent-Metal hardens* I swear to god, Luna.");
-//             }
-//             else if (OC.ToLower() == "nicky")
-//             {
-//                 Console.WriteLine("--------------------------------");
-//                 Console.WriteLine("Rune: Hi Nicky.\nNicky: Sup, now get to the point.\nRune: Let's go beat and cut. *Armanent-Metal leaking*\nNicky: Nice, i'm down. *Grabs katana*");
-//             }
-//             else if (OC.ToLower() == "rune")
-//             {
-//                 Console.WriteLine("-------------------------------");
-//                 Console.WriteLine("Rune: Hi self.\n----------[ Silence ]----------");
-//             }
-//             else if (OC.ToLower().Contains("idk"))
-//             {
-//                 Console.WriteLine("Rune: Mk.");
-//             }
-//             else
-//             {
-//                 Console.WriteLine("Rune: Stranger danger mate.");
-//             }
-//         }
-//     }
-// }
+            while (true) {
+                Console.Write("Nicky: Guess who is with Rune? ᴿᵘⁿᵉ ⁻ ᴶᵉˢᵘˢ ᶜʰʳᶦˢᵗ ˢᵗᵒᵖ⁻ ");
+                Guess = Console.ReadLine();
+
+                if (Guess.ToLower() == "mitch")
+                {
+                    Console.WriteLine("-----------------------------------------------------------------" + "\n");
+                    Console.WriteLine("Nicky: You are definitely wrong bro.");
+                    Console.WriteLine("\n" + "-----------------------------------------------------------------");
+                }
+                else if (Guess.ToLower() == "luna")
+                {
+                    Console.WriteLine("-----------------------------------------------------------------" + "\n");
+                    Console.WriteLine("Nicky: You got it right and she's deadly, so Rune is probably defenseless about it...");
+                    Console.WriteLine("Rune: This is a relief but jesus christ get her away from me-");
+                    Console.WriteLine("\n" + "-----------------------------------------------------------------");
+                }
+                else if (Guess.ToLower() == "mallo")
+                {
+                    Console.WriteLine("-----------------------------------------------------------------" + "\n");
+                    Console.WriteLine("Nicky: Mallo, anything you got to say about this?");
+                    Console.WriteLine("Rune: I think you're breaking her-");
+                    Console.WriteLine("Nicky: Shut.");
+                    Console.WriteLine("Mallo: All i got to say is, no.");
+                    Console.WriteLine("Nicky: Amazing!");
+                    Console.WriteLine("\n" + "-----------------------------------------------------------------");
+                }
+                else if (Guess.ToLower() == "himself")
+                {
+                    Console.WriteLine("-----------------------------------------------------------------" + "\n");
+                    Console.WriteLine("Nicky: Wow, you're proven to be dumb and also wrong.");
+                    Console.WriteLine("Rune: Nice.");
+                    Console.WriteLine("\n" + "-----------------------------------------------------------------");
+                }
+            }
+        }
+    }
+}

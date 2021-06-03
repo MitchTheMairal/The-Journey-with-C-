@@ -4,8 +4,8 @@ using System;
 
 namespace Join_Method
 {
-    class M2 {
-        // static void Main(string[] args)
+    public class M2 {
+        // public static void Main(string[] args)
         // {
         //     string[] OCs = { "Mitch", "Luna", "Rune", "Rea", "Mallo" };
             

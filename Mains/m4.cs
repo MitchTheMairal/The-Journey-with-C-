@@ -4,8 +4,8 @@ using System;
 
 namespace Foreach_Loop_with_Indexes
 {
-    class M3 {
-        // static void Main(string[] args)
+    public class M3 {
+        // public static void Main(string[] args)
         // {
         //     string[] OCs = { "Mitch", "Rea", "Luna", "Rune", "Mallo" };
             

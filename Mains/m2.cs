@@ -4,8 +4,8 @@ using System;
 
 namespace Random_Element
 {
-    class M1 {
-        // static void Main(string[] args)
+    public class M1 {
+        // public static void Main(string[] args)
         // {
         //     var _Random_ = new Random();
 
