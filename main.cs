@@ -28,15 +28,16 @@ namespace Guess_The_Ingredient
             int Correct_Answer_Position = Positions[_Random_.Next(Positions.Length)];
 
             int Incorrect_Count = 0;
-            int Correct_Count = 0;
+            int Correct_Answer_Count = 0;
+            int Incorrect_Answer_Count = 0;
 
             // Console.WriteLine(Chosen_Ingredient);
 
-            Console.WriteLine("\n------------------------------------------------");
+            Console.WriteLine("\n" + "------------------------------------------------");
             Console.WriteLine("An Ingredient has been chosen, pick your answer.");
             Console.WriteLine("------------------------------------------------");
 
-            Console.WriteLine("A) " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | B) " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | C) " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+            Console.WriteLine("" + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
 
             string Chosen_Answer = Console.ReadLine();
 
@@ -45,40 +46,15 @@ namespace Guess_The_Ingredient
             This will also reset the incorrect count if you get the ingredient correct.
             */
             while (Chosen_Ingredient == Chosen_Answer) {
-                Chosen_Ingredient = Ingredients[_Random_.Next(Ingredients.Length)];
-
-                Incorrect_Answer_1 = Ingredients[_Random_.Next(Ingredients.Length)];
-                Incorrect_Answer_2 = Ingredients[_Random_.Next(Ingredients.Length)];
-                Incorrect_Answer_3 = Ingredients[_Random_.Next(Ingredients.Length)];
-
-                Correct_Answer_Position = Positions[_Random_.Next(Positions.Length)];
-
-                // Console.WriteLine(Chosen_Ingredient);
-
-                Console.WriteLine("Correct.");
-
-                Console.WriteLine("\n------------------------------------------------");
-                Console.WriteLine("An Ingredient has been chosen, pick your answer.");
-                Console.WriteLine("------------------------------------------------");
-
-                Console.WriteLine("A) " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | B) " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | C) " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
-
-                Chosen_Answer = Console.ReadLine();
-
-                Correct_Count++;
-                Incorrect_Count = 0;
-            }
-
-            /*
-            Continue and add 1 to the incorrect count if the answer is incorrect.
-            If the incorrect count is equals to 3, the game will end.
-            */
-            while (Chosen_Ingredient != Chosen_Answer)
-            {
-                if (Incorrect_Count >= 2) // Incorrect 3 Times
+                Correct_Answer_Count++;
+                switch (Incorrect_Count)
                 {
-                    Console.WriteLine("\nGame Over. You've answered " + Correct_Count + " questions correctly.");
-                    break;
+                    case 0:
+                        Incorrect_Count = 0;
+                        break;
+                    default:
+                        Incorrect_Count--;
+                        break;
                 }
 
                 Chosen_Ingredient = Ingredients[_Random_.Next(Ingredients.Length)];
@@ -91,14 +67,51 @@ namespace Guess_The_Ingredient
 
                 // Console.WriteLine(Chosen_Ingredient);
 
+                Console.WriteLine("Correct. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Correct_Answer_Count + " questions answered correctly.");
+
+                Console.WriteLine("\n" + "------------------------------------------------");
+                Console.WriteLine("An Ingredient has been chosen, pick your answer.");
+                Console.WriteLine("------------------------------------------------");
+
+                Console.WriteLine(" " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+
+                Chosen_Answer = Console.ReadLine();
+            }
+
+            /*
+            Continue and add 1 to the incorrect count if the answer is incorrect.
+            If the incorrect count is equals to 3, the game will end.
+            */
+            while (Chosen_Ingredient != Chosen_Answer)
+            {
+                if (Incorrect_Count >= 2) // Incorrect 3 Times
+                {
+                    Console.WriteLine("\n" + "Game Over. You have answered " + Correct_Answer_Count + " question {} correctly, and " + Incorrect_Answer_Count + " questions answered incorrectly.");
+                    break;
+                }
+
+                Incorrect_Count++;
+                Incorrect_Answer_Count++;
+
+                Chosen_Ingredient = Ingredients[_Random_.Next(Ingredients.Length)];
+
+                Incorrect_Answer_1 = Ingredients[_Random_.Next(Ingredients.Length)];
+                Incorrect_Answer_2 = Ingredients[_Random_.Next(Ingredients.Length)];
+                Incorrect_Answer_3 = Ingredients[_Random_.Next(Ingredients.Length)];
+
+                Correct_Answer_Position = Positions[_Random_.Next(Positions.Length)];
+
+                // Console.WriteLine(Chosen_Ingredient);
+
+                Console.WriteLine("Incorrect. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Incorrect_Answer_Count + " questions answered incorrectly.");
+
                 Console.WriteLine("\n------------------------------------------------");
                 Console.WriteLine("An Ingredient has been chosen, pick your answer.");
                 Console.WriteLine("------------------------------------------------");
 
-                Console.WriteLine("A) " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | B) " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | C) " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+                Console.WriteLine(" " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
 
                 Chosen_Answer = Console.ReadLine();
-                Incorrect_Count++;
             }
         }
     }
