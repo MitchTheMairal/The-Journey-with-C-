@@ -37,7 +37,7 @@ namespace Guess_The_Ingredient
             Console.WriteLine("An Ingredient has been chosen, pick your answer.");
             Console.WriteLine("------------------------------------------------");
 
-            Console.WriteLine("" + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+            Console.WriteLine((Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
 
             string Chosen_Answer = Console.ReadLine();
 
@@ -67,13 +67,13 @@ namespace Guess_The_Ingredient
 
                 // Console.WriteLine(Chosen_Ingredient);
 
-                Console.WriteLine("Correct. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Correct_Answer_Count + " questions answered correctly.");
+                Console.WriteLine("\n" + "Correct. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Correct_Answer_Count + " questions answered correctly.");
 
                 Console.WriteLine("\n" + "------------------------------------------------");
                 Console.WriteLine("An Ingredient has been chosen, pick your answer.");
                 Console.WriteLine("------------------------------------------------");
 
-                Console.WriteLine(" " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+                Console.WriteLine((Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
 
                 Chosen_Answer = Console.ReadLine();
             }
@@ -103,13 +103,13 @@ namespace Guess_The_Ingredient
 
                 // Console.WriteLine(Chosen_Ingredient);
 
-                Console.WriteLine("Incorrect. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Incorrect_Answer_Count + " questions answered incorrectly.");
+                Console.WriteLine("\n" + "Incorrect. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Incorrect_Answer_Count + " questions answered incorrectly.");
 
-                Console.WriteLine("\n------------------------------------------------");
+                Console.WriteLine("\n" + "------------------------------------------------");
                 Console.WriteLine("An Ingredient has been chosen, pick your answer.");
                 Console.WriteLine("------------------------------------------------");
 
-                Console.WriteLine(" " + (Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+                Console.WriteLine((Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
 
                 Chosen_Answer = Console.ReadLine();
             }
