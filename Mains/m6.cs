@@ -1,4 +1,4 @@
-// Basic Infinite Multi-choice Game | Guess The Ingredient ~ 6/10/21; June 10, 2021
+// C# - Basic Infinite Multi-choice Game | Guess The Ingredient ~ 6/10/21; June 10, 2021
 
 using System;
 
