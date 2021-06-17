@@ -35,9 +35,11 @@ namespace Guess_The_Ingredient
 
             Console.WriteLine("\n" + "------------------------------------------------");
             Console.WriteLine("An Ingredient has been chosen, pick your answer.");
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("------------------------------------------------" + "\n");
 
             Console.WriteLine((Correct_Answer_Position == 1 ? Chosen_Ingredient : Incorrect_Answer_1) + " | " + (Correct_Answer_Position == 2 ? Chosen_Ingredient : Incorrect_Answer_2) + " | " + (Correct_Answer_Position == 3 ? Chosen_Ingredient : Incorrect_Answer_3) + "\n");
+
+            Console.WriteLine("------------------------------------------------" + "\n" + "Enter \"Stop\" if you want to end or stop the game." + "\n");
 
             string Chosen_Answer = Console.ReadLine();
 
@@ -45,7 +47,8 @@ namespace Guess_The_Ingredient
             Continue the game and add 1 to the correct count if the answer is correct.
             This will also reset the incorrect count if you get the ingredient correct.
             */
-            while (Chosen_Ingredient == Chosen_Answer) {
+            while (Chosen_Ingredient == Chosen_Answer)
+            {
                 Correct_Answer_Count++;
                 switch (Incorrect_Count)
                 {
@@ -67,7 +70,7 @@ namespace Guess_The_Ingredient
 
                 // Console.WriteLine(Chosen_Ingredient);
 
-                Console.WriteLine("\n" + "Correct. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Correct_Answer_Count + " questions answered correctly.");
+                Console.WriteLine("\n" + "Correct. The Ingredient is " + Chosen_Ingredient + ".\n" + "You have " + Correct_Answer_Count + " questions answered correctly.");
 
                 Console.WriteLine("\n" + "------------------------------------------------");
                 Console.WriteLine("An Ingredient has been chosen, pick your answer.");
@@ -84,9 +87,15 @@ namespace Guess_The_Ingredient
             */
             while (Chosen_Ingredient != Chosen_Answer)
             {
-                if (Incorrect_Count >= 2) // Incorrect 3 Times
+                // Stop the game if the answer that was left is "Stop"
+                if (Chosen_Answer == "Stop")
                 {
-                    Console.WriteLine("\n" + "Game Over. You have answered " + Correct_Answer_Count + " question {} correctly, and " + Incorrect_Answer_Count + " questions answered incorrectly.");
+                    Console.WriteLine("Game has been cancelled. You have answered " + Correct_Answer_Count + " questions correctly, and " + Incorrect_Answer_Count + " questions incorrectly.");
+                    break;
+                }
+                if (Incorrect_Count == 3) // Incorrect 3 Times
+                {
+                    Console.WriteLine("\n" + "Game Over. You have answered " + Correct_Answer_Count + " questions correctly, and " + (Incorrect_Answer_Count + 1) + " questions answered incorrectly.");
                     break;
                 }
 
@@ -103,7 +112,7 @@ namespace Guess_The_Ingredient
 
                 // Console.WriteLine(Chosen_Ingredient);
 
-                Console.WriteLine("\n" + "Incorrect. The Ingredient is " + Chosen_Ingredient + ".\nYou have " + Incorrect_Answer_Count + " questions answered incorrectly.");
+                Console.WriteLine("\n" + "Incorrect. The Ingredient is " + Chosen_Ingredient + ".\n" + "You have " + Incorrect_Answer_Count + " questions answered incorrectly.");
 
                 Console.WriteLine("\n" + "------------------------------------------------");
                 Console.WriteLine("An Ingredient has been chosen, pick your answer.");
